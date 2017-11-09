@@ -19,7 +19,7 @@ const savePuppers = async () => {
     }
 };
 
-const refresh = setInterval(savePuppers(), 900000);
+const refresh = setInterval(() => {savePuppers()}, 900000);
 
 module.exports = {
     savePuppers,

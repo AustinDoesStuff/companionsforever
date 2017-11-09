@@ -2,9 +2,10 @@ require('./../server/config/config');
 
 const express = require('express');
 const hbs = require('hbs');
+const nodeMailer = require('nodemailer');
 
 const {refresh, savePuppers} = require('./utils/refresh');
-const {getPups} = require('./utils/petfinder');
+const {Pupper} = require('./models/pupper'); 
 
 var app = express();
 
@@ -14,14 +15,13 @@ app.use(express.static(__dirname + '/public'));
 const port = process.env.PORT || 3000;
 
 savePuppers();
-refresh();
+setInterval(() => { savePuppers() }, 900000);
 
-app.get('', (req, res) => {
-    getPups().then((pup) => {
-        res.render('index.hbs', {
-            pup
-        });
-    }).catch((e) => console.log(e));
+app.get('', async (req, res) => {
+    const pup = await Pupper.find({}).limit(3);
+    res.render('index.hbs', {
+        pup
+    });
 });
 
 app.get('/about', (req, res) => {
@@ -45,7 +45,11 @@ app.get('/contact', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-    //mail stuff
+    const email = req.body.email;
+    const name = req.body.name;
+    const body = req.body.message;
+
+    
 });
 
 app.listen(port, () => {
