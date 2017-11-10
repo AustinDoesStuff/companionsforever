@@ -25,26 +25,26 @@ const Pupper = mongoose.model('pupper', {
         type: String,
         minlength: 1
     },
-    photo: {
-        type: String,
-        minlength: 1,
-        require: true
-    },
-    animal: {
-        type: String,
-        require: true,
-        minlength:1
-    },
-    breed: {
-        type: String,
-        require: true,
-        minlength: 1
-    },
-    _id: {
-        type: Number,
-        require: true,
-        minlength: 1
-    }
+  photo: {
+    type: String,
+    minlength: 1,
+    require: true,
+  },
+  animal: {
+    type: String,
+    require: true,
+    minlength: 1,
+  },
+  breed: {
+    type: String,
+    require: true,
+    minlength: 1,
+  },
+  _id: {
+    type: Number,
+    require: true,
+    minlength: 1,
+  },
 });
 
-module.exports = {Pupper};
+module.exports = { Pupper };
