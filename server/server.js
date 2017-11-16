@@ -2,20 +2,25 @@ require('./../server/config/config');
 
 const express = require('express');
 const hbs = require('hbs');
+const path = require('path');
 const bodyParser = require('body-parser');
 
 const { savePuppers } = require('./utils/refresh');
 const { Pupper } = require('./models/pupper');
 const { transporter } = require('./utils/mail');
 
+const publicPath = path.join(__dirname, '..', '/public');
+const partialsPath = path.join(__dirname, '..', '/views/partials');
+const port = process.env.PORT || 3000;
+
 const app = express();
 
-app.set('view engine', 'hbs');
-app.use(express.static(__dirname + '/public'));
-// app.use(bodyParser());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(publicPath));
 
-const port = process.env.PORT || 3000;
+hbs.registerPartials(partialsPath);
+app.set('view engine', 'hbs');
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 savePuppers();
 setInterval(() => { savePuppers(); }, 900000);

@@ -1,26 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>Companions Forever</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Julius+Sans+One|Nunito|Permanent+Marker|Sacramento|Satisfy"
+    rel="stylesheet"/>
+  <link rel="stylesheet" type='text/css' href="css/navbar.css"/>
+  <link rel="stylesheet" type='text/css' href="css/index.css"/>
+  <title>Companions Forever</title>
 </head>
+
 <body>
-    <h1>Companion's Forever</h1>
-    <div class="container-fluid">
-        <div class="row">
-            {{#each pup}}
-            <div class="col-md-4">
-                <h1>{{this.name}}!</h1>
-                <h2>{{this.breed}}</h2>
-                <img src="{{this.photo}}"></img>
-                <p>{{this.sex}}, {{this.age}} </p>
-            </div>
-            {{/each}}
-        </div>
+  {{> navbar}}
+
+  <img id="mainImage" src="images/mainlogo.jpg">
+  
+  <div id="pupperHeading" class="text-center">
+    <p id="mission">our mission:</p>
+    <span align="center">finding their
+      <span id="furever">furever</span>
+      home</span>
+  </div>
+  
+  <div class="doggoRow row">
+  {{#each pup}}
+    <div class="col-md-4 text-center">
+      <h1>{{this.name}}</h1>
+      <h2>{{this.breed}}</h2>
+      <img class="doggoPic" src="{{this.photo}}"></img>
+      <p id="gender">{{this.age}}, {{this.sex}} </p>
     </div>
+  {{/each}}
+  </div>
+  
+  
+  <div id="boneBar" class="text-center">
+    <span id="bone">Throw us a bone?</span>
+  </div>
+  <div class="row donationBar text-center">
+    <div id="donate10" class="outer col-md-3">
+      <div class="donation">
+        <h1 class="a">Donate</h1>
+        <h2>$10</h2>
+        <span id="description">A $10 donation buys a bag of food for our animals</span>
+        <br>
+        <button class="btn btn-primary">Donate Now</button>
+      </div>
+    </div>
+    <div id="donate10" class="outer col-md-3">
+      <div class="donation">
+        <h1 class="a">Donate</h1>
+        <h2>$25</h2>
+        <span id="description">A $25 donation covers heartworm preventative</span>
+        <br>
+        <button class="btn btn-primary">Donate Now</button>
+      </div>
+    </div>
+    <div id="donate10" class="outer col-md-3">
+      <div class="donation">
+        <h1 class="a">Donate</h1>
+        <h2>$50</h2>
+        <span id="description">A $50 donation buys a bag of food for our animals</span>
+        <br>
+        <button class="btn btn-primary">Donate Now</button>
+      </div>
+    </div>
+    <div id="donate10" class="outer col-md-3">
+      <div class="donation">
+        <h1 class="a">Donate</h1>
+        <h2>$100</h2>
+        <span id="description">A $100 donation buys a bag of food for our animals</span>
+        <br>
+        <button class="btn btn-primary">Donate Now</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

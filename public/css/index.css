@@ -1,0 +1,107 @@
+body {
+  font-size: x-large;
+  max-width: 100%;
+}
+
+.donationBar {
+  color: white;
+  background-color:#657287;
+  z-index: -1;
+}
+.outer{
+  color: white;
+  outline-style: dotted;
+}
+
+
+.doggoRow {
+  background-color: #e8ae68;
+  z-index: -1;
+}
+
+#mainImage {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: .8em;
+  max-width:100%;
+}
+.col-md-4 {
+  max-width: 100%;
+}
+#mission {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-top: 1em;
+  margin-bottom: -.25em;
+}
+
+#pupperHeading {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.3em;
+  font-weight: bolder;
+  margin-bottom: -.75em;
+  min-width:320px;
+  
+}
+
+#furever {
+  font-family: 'Satisfy', cursive;
+  color: #2b8aff;
+  font-size: 3em;
+  padding-top:-1em;
+  z-index:1;
+}
+
+.doggoPic {
+  max-width: 100%;
+  padding-bottom: 0.5em;
+}
+
+#description {
+  width: 0.8em;
+  font-size: .8em;
+}
+#donate10 {
+  background-color: #657287;
+  border-radius: px;
+}
+.a {
+  margin-bottom: .5em;
+}
+.btn {
+  margin: 1em 0 1em 0;
+}
+
+#bone {
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  font-size: 2.5em;
+  z-index: 1;
+}
+#boneBar{
+  background-color:#657287;
+}
+
+@media (max-width: 1000px) {
+  body { font-size: large; }
+  .outer{
+    color: white;
+    outline-style:none;
+  }
+}
+
+@media (max-width: 500px) {
+  body { font-size: medium; }
+  .outer{
+    font-size: 1.5em;
+    outline-style: none;
+  }
+  
+  #pupperHeading{
+    font-size: 1em;
+  }
+  
+  #furever {
+    font-size: 2.75em;
+  }
+}

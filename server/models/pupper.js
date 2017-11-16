@@ -1,30 +1,30 @@
 const mongoose = require('mongoose');
 
 const Pupper = mongoose.model('pupper', {
-    name: {
-        type: String,
-        require: true,
-        minlength: 1
-    },
-    age: {
-        type: String || Number,
-        require: true,
-        minlength: 1
-    },
-    description: {
-        type: String,
-        require: true,
-        minlength:1
-    },
-    sex: {
-        type: String,
-        require: true,
-        minlength: 1
-    },
-    size: {
-        type: String,
-        minlength: 1
-    },
+  name: {
+    type: String,
+    require: true,
+    minlength: 1
+  },
+  age: {
+    type: String || Number,
+    require: true,
+    minlength: 1
+  },
+  description: {
+    type: String,
+    require: true,
+    minlength:1
+  },
+  sex: {
+    type: String,
+    require: true,
+    minlength: 1
+  },
+  size: {
+    type: String,
+    minlength: 1
+  },
   photo: {
     type: String,
     minlength: 1,
