@@ -3,15 +3,17 @@
 }
 ul {
     list-style-type: none;
+    font-family: 'Julius Sans One';
     margin: 0;
-    padding: 0;
+    padding-left: 25%;
     overflow: hidden;
-    background-color: #70c3ff;
+    background-color: rgba(0, 0, 0, 0.5);
     max-width:100%;
 }
 
 li {
-    float: left;
+    display: inline-block;
+    text-size: 0.5em;
 }
 
 li a {
