@@ -16,12 +16,12 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-dropin.create(
-  {
-    /* options */
-  },
-  callback
-);
+// dropin.create(
+//   {
+//     /* options */
+//   },
+//   callback
+// ); Drop-in Braintree
 
 app.use(express.static(publicPath));
 
