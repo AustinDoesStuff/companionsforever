@@ -1,7 +1,7 @@
 .navBar{
   margin-bottom: 4em;
 }
-ul {
+.navBar ul {
     list-style-type: none;
     font-family: 'Julius Sans One';
     margin: 0;
@@ -11,12 +11,12 @@ ul {
     max-width:100%;
 }
 
-li {
+.navBar li {
     display: inline-block;
     text-size: 0.5em;
 }
 
-li a {
+.navBar li a {
     display: block;
     color: white;
     text-align: center;
@@ -24,7 +24,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.navBar li a:hover {
     background-color: #2b8aff;
     text-decoration: none;
     color: white;

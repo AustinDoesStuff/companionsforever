@@ -4,6 +4,7 @@ const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const dropin = require('braintree-web-drop-in');
 
 const { savePuppers } = require('./utils/refresh');
 const { Pupper } = require('./models/pupper');
@@ -14,6 +15,13 @@ const partialsPath = path.join(__dirname, '..', '/views/partials');
 const port = process.env.PORT || 3000;
 
 const app = express();
+
+dropin.create(
+  {
+    /* options */
+  },
+  callback
+);
 
 app.use(express.static(publicPath));
 
